@@ -8,5 +8,11 @@ int main(){
 	scanf("%s", name);
 	printf("Nice to meet you %s! Let's play a game. \n", name);
 
+	srand(time(NULL));
+	int a;
+	a = rand();
+	a = (a % 100) + 1;
+	printf("%d", a);
+	
 	return 0;
 } // end main	
