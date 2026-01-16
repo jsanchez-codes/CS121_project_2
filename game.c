@@ -12,7 +12,10 @@ int main(){
 	int a;
 	a = rand();
 	a = (a % 100) + 1;
-	printf("%d", a);
+	printf("%d \n", a);
+	
+	printf("Please guess a number: ");
+	scanf("%d", &a);
 	
 	return 0;
 } // end main	
