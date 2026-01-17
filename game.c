@@ -15,8 +15,6 @@ int main(){
 	srand(time(NULL));
 	correct = (rand() % 100) + 1;
 
-	printf("Correct: %d \n", correct);
-
 	printf("Hello. What is your name? ");
 	scanf("%s", userName);
 	printf("Nice to meet you %s. Let's play a number guessing game. \n", userName);
