@@ -19,23 +19,32 @@ int main(){
 
 	printf("Hello. What is your name? ");
 	scanf("%s", userName);
-	printf("Nice to meet you %s. Let's play a game. \n", userName);
+	printf("Nice to meet you %s. Let's play a number guessing game. \n", userName);
 
 	while (keepGoing == TRUE){
 		turns++;
-		printf("Please guess a number 1-100: ");
+		printf("Turn %d. Please guess a number 1-100: ", turns);
 		scanf("%d", &guess);
-		printf("You guessed %d. \n", guess);
+		printf("You guessed the number %d. \n", guess);
 
 		if (guess < correct){
 			printf("Too low. \n");
 		}	else if (guess > correct){
 			printf("Too high. \n");
 		}	else {
-			printf("You guessed the number! \n");
+			printf("You guessed the number correctly! \n");
+			keepGoing = FALSE;
+		} // end if
+		if (turns < 7){
+			printf("Good Job! You guessed the number in less turns than the average user. \n");
+		}	else if (turns > 7){
+			printf("You can do better than that. Try again to guess the number in 7 (average) or less turns. \n");
+		}	else {
+			printf("Your score is the user average amount of turns. Try again to beat the average score. \n");
 			keepGoing = FALSE;
 		} // end if
 	} // end while
 	
+
 	return 0;
 } // end main	
