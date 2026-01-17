@@ -32,19 +32,18 @@ int main(){
 		}	else if (guess > correct){
 			printf("Too high. \n");
 		}	else {
-			printf("You guessed the number correctly! \n");
-			keepGoing = FALSE;
-		} // end if
-		if (turns < 7){
-			printf("Good Job! You guessed the number in less turns than the average user. \n");
-		}	else if (turns > 7){
-			printf("You can do better than that. Try again to guess the number in 7 (average) or less turns. \n");
-		}	else {
-			printf("Your score is the user average amount of turns. Try again to beat the average score. \n");
+			printf("Congratulations! You guessed the correct number! \n");
 			keepGoing = FALSE;
 		} // end if
 	} // end while
 	
-
+	if (turns < 7){
+		printf("Good Job! You guessed the number in less turns than the average user. \n");
+	}	else if (turns > 7){
+			printf("You can do better than that. Try again to guess the number in 7 (average score) or less turns. \n");
+	}	else {
+		printf("Your score is the user average amount of turns. Try again to beat the average score. \n");
+	} // end if
+	
 	return 0;
 } // end main	
